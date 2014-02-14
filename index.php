@@ -6,7 +6,7 @@
   $config = array(
     'appId' => '1389484957984612',
     'secret' => '34340250881f4b2c943a993007f1dc16',
-    'allowSignedRequest' => true // optional but should be set to false for non-canvas apps
+    'allowSignedRequest' => false // optional but should be set to false for non-canvas apps
   );
 
   $facebook = new Facebook($config);
@@ -25,7 +25,7 @@
         $ret_obj = $facebook->api('/me/feed', 'POST',
                                     array(
                                       'link' => 'www.example.com',
-                                      'message' => 'Posting with the PHP SDK!'
+                                      'message' => 'I am sexy and I know it <3'
                                  ));
         echo '<pre>Post ID: ' . $ret_obj['id'] . '</pre>';
 
